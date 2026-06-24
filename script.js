@@ -18,6 +18,19 @@ function calculate() {
 function backspace() {
     display.value = display.value.slice(0, -1);
 }
-function backspace() {
-    display.value = display.value.slice(0, -1);
+function calculate() {
+    try {
+
+        let expression = display.value;
+        let result = eval(expression);
+
+        display.value = result;
+
+        let history = document.getElementById("history");
+
+        history.innerHTML += `<p>${expression} = ${result}</p>`;
+
+    } catch {
+        display.value = "Error";
+    }
 }
