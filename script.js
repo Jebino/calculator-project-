@@ -18,4 +18,6 @@ function calculate() {
 function backspace() {
     display.value = display.value.slice(0, -1);
 }
-
+function backspace() {
+    display.value = display.value.slice(0, -1);
+}
